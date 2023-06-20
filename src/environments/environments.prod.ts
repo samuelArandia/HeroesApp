@@ -1,3 +1,4 @@
 export const environment = {
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://samuelarandia.github.io/HeroesApp/',
+  production: true
 };

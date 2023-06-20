@@ -5,8 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "delete:docs": "del docs",
+    "copy:dist": "copyfiles dist/bases/* ./docs -f",
     "backend": "json-server --watch data/db.json"
   },
   "private": true,
@@ -21,6 +25,8 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.9",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
